@@ -18,6 +18,14 @@ const config: Config = {
         black: {
           DEFAULT: '#000',
           100: '#000319'
+        },
+        purple: {
+          DEFAULT: 'purple',
+          100: '#CBACF9'
+        },
+        blue: {
+          DEFAULT: 'blue',
+          100: '#E4ECFF'
         }
       },
       animation: {
