@@ -6,9 +6,13 @@ import { cn } from "@/utils/cn";
 export const TextGenerateEffect = ({
   words,
   className,
+  duration,
+  delay
 }: {
   words: string;
   className?: string;
+  duration?: number;
+  delay?: number;
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
@@ -19,8 +23,8 @@ export const TextGenerateEffect = ({
         opacity: 1,
       },
       {
-        duration: 2,
-        delay: stagger(0.2),
+        duration: duration ?? 1,
+        delay: stagger(delay ?? 0.2),
       }
     );
   }, [scope.current]);
@@ -32,6 +36,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
+              // TODO: get rid of this hardcoded index
               className={`${idx > 3 ? 'text-purple-100' : 'dark:text-white text-black'} opacity-0`}
             >
               {word}{" "}
