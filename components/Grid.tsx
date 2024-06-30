@@ -11,8 +11,8 @@ const Grid = ({
     gridItems: any[];
 }) => {
   return (
-    <section id={sectionId} className="">
-        <h2 className="relative dark:text-white text-4xl text-center pt-10 pb-10">{title}</h2>
+    <section id={sectionId} className="relative">
+        <h2 className="heading dark:text-white pt-10 pb-10">{title}</h2>
         <BentoGrid>
             {gridItems.map(
                 (item, i) => (

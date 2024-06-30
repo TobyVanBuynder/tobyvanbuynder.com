@@ -70,7 +70,7 @@ export const FloatingNav = ({
               {
                 !navItem.icon
                 ? <span className="text-sm font-medium relative text-black dark:text-white px-1">{navItem.name}</span>
-                : <span className="block">{getIconByName(navItem.icon)}</span>
+                : <span className="block">{getIconByName(navItem.icon, 1)}</span>
               }
               
             </Link>

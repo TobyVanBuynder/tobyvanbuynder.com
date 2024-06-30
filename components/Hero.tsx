@@ -6,7 +6,7 @@ import { getIconByName } from '@/utils/getIconByName'
 
 const Hero = () => {
     return (
-        <section id="hero" className="pb-8 pt-8">
+        <section id="hero" className="pb-8 pt-8" /* TODO: fix bug causing these spotlights to scale width of website*/>
             <Spotlight className="-top-40 -left-10 md:-left:32 md:-top-20 h-screen" />
             <Spotlight className="top-10 left-full h-[80vh] w-[50vw}" fill="purple" />
             <Spotlight className="-top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
@@ -20,7 +20,7 @@ const Hero = () => {
                     <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">Toby Van Buynder</h2>
 
                     <TextGenerateEffect
-                        className="text-center text-[40px] md:text-5xl lg:text-6xl"
+                        className="text-center text-[40px] md:text-5xl lg:text-6xl overflow-hidden"
                         words="Creative Developer / Game Programmer"
                     />
 
@@ -29,7 +29,7 @@ const Hero = () => {
                     </p>
 
                     <a href="#shipped-projects">
-                        <Button title='Show My Work' icon={getIconByName('locationArrow')} position={'right'} />
+                        <Button title='Show My Work' icon={getIconByName('locationArrow', 1)} position={'right'} />
                     </a>
                 </div>
             </div>
